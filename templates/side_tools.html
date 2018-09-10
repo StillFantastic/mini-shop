@@ -1,0 +1,20 @@
+<div class="alert alert-success">{$login_user.user_name} hello!</div>
+
+<form action="index.php" method="get" role="form">
+	<div class="input-group">
+		<input name="keyword" type="text" class="form-control" placeholder="請輸入關鍵字">
+		<span class="input-group-btn">
+			<button class="btn btn-default" type="submit">搜尋</button>
+		</span>
+	</div>
+</form>
+<br>
+<a href="index.php" class="btn btn-block btn-primary">Home Page</a>
+<a href="user.php?op=display_user&user_sn={$login_user.user_sn}" class="btn btn-block btn-info">My account</a>
+{if $isUser}
+	<a href="bill.php" class="btn btn-block btn-warning">My Order</a>
+{/if}
+{if $isAdmin}
+	<a href="tool.php?op=goods_form" class="btn btn-block btn-success">Publish Product</a>
+{/if}
+<a href="user.php?op=user_logout" class="btn btn-block btn-danger">Logout</a>

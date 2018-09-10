@@ -1,0 +1,25 @@
+<form class="form-horizontal" role="form" action="user.php" method="post">
+	<div class="form-group">
+		<label class="col-md-3 control-label">Account:</label>
+		<div class="col-md-9">
+			<input type="text" name="user_id" id="user_id" class="form-control" placeholder="Account">	
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-md-3 control-label">Password:</label>
+		<div class="col-md-9">
+			<input type="password" name="user_passwd" id="user_passwd" class="form-control" placeholder="Password">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-md-3">
+			<a href="user.php?op=user_form" class="btn btn-link">Register</a>	
+		</label>
+		<div class="col-md-9">
+			<input type="hidden" name="op" value="user_login">
+			<button type="submit" name="button" class="btn btn-primary btn-block">Login</button>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	
+	<body>
+		<div class="container">
+				<div id="shop_head">
+					<a href="index.php">
+						<img src="images/title.jpg" alt="Mini Shop" clss="img-responsive" width="100%" />
+					</a>
+				</div>
+				<div id="shop_main" class="row">
+					<div class="col-md-8">
+						{if isset($msg)}
+							<div class="alert alert-danger">{$msg}</div>
+						{/if}
+						{if $op == "goods_form"}
+							{include file="goods_form.html"}	
+						{elseif $op == "goods_display"}
+							{include file="goods_display.html"}
+						{elseif $op == "user_form"}
+							{include file="user_form.html"}
+						{elseif $op == "display_user"}
+							{include file="display_user.html"}
+						{elseif $op == "check_out"}
+							{include file="bill_check_out.html"}
+						{elseif $op == "display_bill"}
+							{include file="display_bill.html"}
+						{elseif $op == "list_bill"}
+							{include file="list_bill.html"}
+						{else}
+							{include file="goods_list.html"}
+							共有{$total}件商品
+							{$bar}
+						{/if}
+					</div>
+					
+					<div class="col-md-4">
+						{include file="index_side.html"}
+					</div>
+				</div>
+				
+				<div id="shop_foot">
+					<div>Address: sjfieojfiojiojsioejfojfoijsiekfjsl</div>
+					<div>Phone: 0909123456</div>
+					<div>Copy Right soeijfioj soeifj</div>	
+				</div>
+		</div>
+	</body>
+</html>
